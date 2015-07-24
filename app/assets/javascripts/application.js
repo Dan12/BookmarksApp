@@ -14,3 +14,10 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+$(document).ready(function(){
+  
+  bookmarks = $('.temp_information').data('temp');
+  for (b in bookmarks){
+    $(".bookmarks").append("<a href='/bookmark/"+bookmarks[b].id+"'>"+bookmarks[b].name+"</a><br>");
+  }
+});
